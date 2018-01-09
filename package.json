@@ -1,0 +1,47 @@
+{
+  "name": "github-api-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/OliviaVF/github-api-search.git",
+  "author": "OliviaVF",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.8",
+    "dotenv-webpack": "^1.5.4",
+    "history": "^4.7.2",
+    "html-webpack-plugin": "^2.30.1",
+    "humps": "^2.0.1",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.7.2",
+    "normalizr": "^3.2.4",
+    "path": "^0.12.7",
+    "proptypes": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.0",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
