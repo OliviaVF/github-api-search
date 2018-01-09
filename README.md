@@ -13,8 +13,8 @@ Contains:
 
 ## Run the app
 
-0. ```git clone the repo```
-0. ```cd into the folder```
+* Clone the Repo.
+* From terminal 'cd' into your folder.
 0. ```yarn```
 0. ```yarn start```
 
