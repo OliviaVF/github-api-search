@@ -22,5 +22,3 @@ Contains:
 ```yarn build```
 
 This will build the app into the "dist" directory in the root of the project. It contains the index.html along with the minified assets, ready for production.
-
-![](http://i.imgur.com/uUg2A3S.png)
