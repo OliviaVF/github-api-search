@@ -20,7 +20,6 @@ const paginate = ({ types, mapActionToKey }) => {
           isFetching: true
         }
       case successType:
-      console.log(action.response)
         return {
           ...state,
           isFetching: false,

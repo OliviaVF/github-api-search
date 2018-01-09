@@ -63,7 +63,6 @@ export const CALL_API = 'Call API'
 
 export default store => next => action => {
   const callAPI = action[CALL_API]
-  console.log('callAPI', callApi)
   if (typeof callAPI === 'undefined') {
     return next(action)
   }

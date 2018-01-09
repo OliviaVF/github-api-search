@@ -18,6 +18,12 @@ Contains:
 0. ```yarn```
 0. ```yarn start```
 
+## Get a Github API Token
+
+Github limits API calls to 10 unless the app is authentication. Click the link below to authenticate the app and get your token. Add it to a '.env' file and label it 'USER_SEARCH_OAUTH'. You can see it being applied in the middleware.
+
+* [Get an API Token](https://github.com/blog/1509-personal-api-tokens)
+
 ## Build the app
 ```yarn build```
 
