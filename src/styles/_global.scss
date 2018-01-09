@@ -39,7 +39,11 @@ input,select,textarea{
   border: 1px solid $line;
   -webkit-appearance: none;
   position: relative;
-  width: 75%;
+  width: 50%;
+}
+
+.input-small {
+  width: 37.5%;
 }
 
 a{

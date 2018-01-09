@@ -47,9 +47,9 @@ class App extends Component {
   render() {
     const { children, inputValue } = this.props
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row padding-sm">
-          <div className="col-lg-8 col-lg-offset-2">
+          <div className="col-lg-12">
             <SearchBar value={inputValue}
              onChange={this.handleChange} />
             {children}

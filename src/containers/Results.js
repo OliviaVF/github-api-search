@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 import { loadUser, loadRepos } from '../actions'
 import User from 'components/User'
 import Repo from 'components/Repo'
+import SearchRepoBar from 'components/SearchRepoBar'
 import RepoList from 'components/RepoList'
 import zip from 'lodash/zip'
 
@@ -53,12 +54,13 @@ class Results extends Component {
 
     const { userRepos, repoPagination } = this.props
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-lg-2">
             <User user={user} />
           </div>
           <div className="col-lg-8 col-lg-offset-1">
+            <SearchRepoBar />
             <RepoList
               renderItem={this.renderRepo}
               items={zip(userRepos)}

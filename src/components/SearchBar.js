@@ -34,11 +34,11 @@ export default class SearchBar extends Component {
   render() {
     return (
       <div>
-        <p>Type a username or organisation and click 'Search':</p>
         <input
           ref={(input) => this.input = input}
           defaultValue={this.props.value}
           onKeyUp={this.handleKeyUp}
+          placeholder="Search a Github user or organisation"
         />
         <button
           className="button"
