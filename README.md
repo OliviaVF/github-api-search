@@ -16,6 +16,7 @@ Contains:
 * From terminal 'cd' into your folder.
 0. ```yarn```
 0. ```yarn start```
+* The app runs on localhost:8080.
 
 ## Get a Github API Token
 
