@@ -7,8 +7,7 @@ Contains:
 * ES6 - 7 Support with Babel.
 * Redux dev tools to help you keep track of the app's state (install the Chrome plugin).
 * Hot module replacement support so you can change modules or react components without having to reload the browser.
-* a webpack production config so you can build the app and make it ready for production
-* Sass support.
+* Sass/scss support.
 * eslint to keep your js readable.
 
 ## Run the app
