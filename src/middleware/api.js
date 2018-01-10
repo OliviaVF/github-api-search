@@ -11,7 +11,6 @@ const getNextPageUrl = response => {
   if (!nextLink) {
     return null
   }
-
   return nextLink.split(';')[0].slice(1, -1)
 }
 

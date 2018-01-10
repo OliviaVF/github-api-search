@@ -23,8 +23,3 @@ Contains:
 Github limits API calls to 10 unless the app is authentication. Click the link below to authenticate the app and get your token. Add it to a '.env' file and label it 'USER_SEARCH_OAUTH'. You can see it being applied in the middleware.
 
 * [Get an API Token](https://github.com/blog/1509-personal-api-tokens)
-
-## Build the app
-```yarn build```
-
-This will build the app into the "dist" directory in the root of the project. It contains the index.html along with the minified assets, ready for production.

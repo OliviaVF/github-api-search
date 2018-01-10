@@ -38,12 +38,10 @@ export const loadRepos = (login, nextPage) => (dispatch, getState) => {
   const {
     nextPageUrl = `search/repositories?q=user:${login}`,
     pageCount = 0,
-    perPage = 5
   } = getState().pagination.ownedByUser[login] || {}
   if (pageCount > 0 && !nextPage) {
     return null
   }
-
   return dispatch(fetchRepos(login, nextPageUrl))
 }
 
@@ -51,32 +49,23 @@ export const SEARCHED_REPOS_REQUEST = 'SEARCHED_REPOS_REQUEST'
 export const SEARCHED_REPOS_SUCCESS = 'SEARCHED_REPOS_SUCCESS'
 export const SEARCHED_REPOS_FAILURE = 'SEARCHED_REPOS_FAILURE'
 
-const fetchSearchedRepos = (login, search, nextPageUrl) => ({
+const fetchSearchedRepos = (login, searchFormSelectors) => ({
   login,
-  search,
+  searchFormSelectors,
   [CALL_API]: {
     types: [ SEARCHED_REPOS_REQUEST, SEARCHED_REPOS_SUCCESS, SEARCHED_REPOS_FAILURE ],
-    endpoint: nextPageUrl,
+    endpoint: `search/repositories?q=user:${login}${searchFormSelectors}`,
     schema: Schemas.REPO_ARRAY
   }
 })
 
-export const searchRepos = (login, search, nextPage) => (dispatch, getState) => {
-  const {
-    nextPageUrl = `search/repositories?q=user:${login}+${search}`,
-    pageCount = 0,
-    perPage = 5
-  } = getState().pagination.ownedByUser[login] || {}
-  if (pageCount > 0 && !nextPage) {
-    return null
+export const searchRepos = (login) => (dispatch, getState) => {
+  let searchFormSelectors = ''
+  if(getState().form.search) {
+    const searchFormData = getState().form.search.values;
+    Object.keys(searchFormData).forEach( key => {
+      searchFormSelectors += searchFormData[key].value;
+    });
   }
-
-  return dispatch(fetchSearchedRepos(login, search, nextPageUrl))
+  return dispatch(fetchSearchedRepos(login, searchFormSelectors))
 }
-
-export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE'
-
-// Resets the currently visible error message.
-export const resetErrorMessage = () => ({
-    type: RESET_ERROR_MESSAGE
-})
